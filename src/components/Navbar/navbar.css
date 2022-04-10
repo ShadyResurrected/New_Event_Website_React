@@ -213,6 +213,18 @@ header
     color: #ff589e;
   }
   
+  .profile-pic {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    right: -12rem;
+    bottom: -39rem;
+  } 
+
+  .my-profile-pic {
+    border-radius: 50%;
+    height: 5rem;
+  }
   @media (max-width: 1200px) {
     .header-area .main-nav .nav li {
       padding-left: 12px;

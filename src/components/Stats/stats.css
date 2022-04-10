@@ -1,0 +1,41 @@
+.welcome-area {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(
+      175deg
+      , rgb(10 64 242 / 30%), rgb(161 10 255 / 56%)), url(../../assests/images/Award2.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; 
+    height: 110vh;
+  }
+  .stats-grid {
+    position: absolute;
+    border-radius: 2rem;
+    background-color: #fff;
+    display: grid;
+    gap: 1.5rem;
+    padding: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 13rem;
+    margin-bottom: 6rem;
+}
+  .grid-column-span-2{
+      grid-column: span 2;
+  }
+  .grid-row-span-2{
+      grid-row: span 2;
+  }
+  .stats-grid-item{
+    background-color: #fff;
+    height : 168px;
+    width: min(95%, 70rem);
+    border-radius: 2rem;
+    box-shadow: 0 2px 48px 0 rgb(0 0 0 / 10%);
+  }
+  .stats-grid-col-2{
+      height: 400px;
+  }

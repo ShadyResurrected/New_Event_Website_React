@@ -16,6 +16,7 @@ Variables
   --title-font : 'Poppins', sans-serif;
 }
 
+
 /* 
 ---------------------------------------------
 reset
@@ -74,6 +75,7 @@ html, body {
   -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
 a {

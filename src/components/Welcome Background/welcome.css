@@ -46,6 +46,45 @@ welcome
     margin-bottom: 40px;
     position: relative;
   }
+
+  .start-btn {
+    position: absolute;
+    left: 4.5rem;
+    top: 7.4rem;
+    border-radius: 2rem;
+    background: linear-gradient(to right, #e350f2, #2e26eb);
+    /* background-color: #fff; */
+    border-width: 0;
+    color: #fff;
+    height: 2rem;
+    transform: scale(2);
+}
+
+.forward-icon{
+  position: relative;
+  top: -.8px;
+}
+.description-summary{
+  position: absolute;
+  top: 0;
+  left: 20rem;
+}
+
+.title-desc{
+  display: flex;
+  justify-content: flex-start;
+  font-size: 4rem;
+  color: #fff;
+  text-transform: capitalize;
+  font-style: italic;
+}
+
+.desc-main{
+  max-width: 600px;
+  text-align: left;
+  font-weight: 600;
+  color: #fff;
+}
   
   @media (max-width: 991px) {
     .welcome-area .header-text {
