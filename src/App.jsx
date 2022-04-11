@@ -13,6 +13,11 @@ import Home from './components/Home/Home'
 
 import Communities from './components/Communities/communities'
 import Stats from './components/Stats/Stats'
+import Footer from './components/Footer/Footer';
+import Blog1 from './components/Blogs/Blog1'
+import Blog2 from './components/Blogs/Blog2'
+import Blog3 from './components/Blogs/Blog3'
+import Compete from './components/Lets_Compete/Compete'
 
 
 function App() {
@@ -24,7 +29,12 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/communities" element={<Communities />} />
           <Route path="/stats" element={<Stats />} />
+          <Route path="/blog-1" element={<Blog1 />} />
+          <Route path="/blog-2" element={<Blog2 />} />
+          <Route path="/blog-3" element={<Blog3 />} />
+          <Route path="/compete" element={<Compete />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
 
 

@@ -1,0 +1,28 @@
+.compete-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.compete-modal-area {
+    height: 90vh;
+    width: 80vw;
+    background: #fff;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 9rem;
+}
+.compete-poster{
+    height: 300px;
+    width: 300px;
+    background-color: #000;
+    border-radius: 2rem;
+}
+.compete-poster-row-1{
+    display: flex;
+}
+.compete-poster-row-2{
+    display: flex;
+}

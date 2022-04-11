@@ -15,7 +15,7 @@ const Testimonial = () => {
                 </div>
                 <div class="offset-lg-3 col-lg-6">
                     <div class="center-text">
-                        <p>Donec tempus, sem non rutrum imperdiet, lectus orci fringilla nulla, at accumsan elit eros a turpis. Ut sagittis lectus libero.</p>
+                        <p>We are sure you like what you're seeing, but why trust us? Go through what others have to say. </p>
                     </div>
                 </div>
             </div>

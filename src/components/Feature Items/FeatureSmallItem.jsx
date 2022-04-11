@@ -15,7 +15,7 @@ const FeatureIt = () => {
                                     <i class="classlogo"><img src="\src\assests\images\logo1.png" alt=""/></i>
                                 </div>
                                 <h5 class="features-title">Stats</h5>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, culpa?</p>
+                                <p>Analytics will be at your fingertips</p>
                             </div>
                         </div>
                         
@@ -25,7 +25,7 @@ const FeatureIt = () => {
                                     <i class="classlogo"><img src="\src\assests\images\logo2.png" alt=""/></i>
                                 </div>
                                 <h5 class="features-title">Earn Prizes</h5>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, autem.</p>
+                                <p>Winners will get monetary rewards</p>
                             </div>
                         </div>
                         

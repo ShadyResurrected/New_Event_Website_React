@@ -3,69 +3,70 @@ import React from 'react'
 import '../Home Parallax/parallax.css'
 
 const Parallax = () => {
-  return (
-    <section class="mini" id="work-process">
-        <div class="mini-content">
-            <div class="container">
-                <div class="row">
-                    <div class="offset-lg-3 col-lg-6">
-                        <div class="info">
-                            <h1>Recent Winners</h1>
-                            <p>Aenean nec tempor metus. Maecenas ligula dolor, commodo in imperdiet interdum, vehicula ut ex. Donec ante diam.</p>
+    return (
+        <section class="mini" id="work-process">
+            <div class="mini-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="offset-lg-3 col-lg-6">
+                            <div class="info">
+                                <h1>Recent Winners</h1>
+                                <p>Winners deserve some recognition, right?
+                                    Well here are some top performers.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                {/* <!-- ***** Mini Box Start ***** --> */}
-                <div class="row">
-                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
-                        <a href="#" class="mini-box">
-                            <i class="confusion_img"><img src="\src\assests\images\confusion_logo.png" alt=""/></i>
-                            <strong>Get Ideas</strong>
-                            <span>Godard pabst prism fam cliche.</span>
-                        </a>
+                    {/* <!-- ***** Mini Box Start ***** --> */}
+                    <div class="row">
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+                            <a href="#" class="mini-box">
+                                <i class="confusion_img"><img src="\src\assests\images\confusion_logo.png" alt="" /></i>
+                                <strong>Get Ideas</strong>
+                                <span>Godard pabst prism fam cliche.</span>
+                            </a>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+                            <a href="#" class="mini-box">
+                                <i class="confusion_img"><img src="\src\assests\images\confusion_logo.png" alt="" /></i>
+                                <strong>Sketch Up</strong>
+                                <span>Godard pabst prism fam cliche.</span>
+                            </a>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+                            <a href="#" class="mini-box">
+                                <i class="confusion_img"><img src="\src\assests\images\confusion_logo.png" alt="" /></i>
+                                <strong>Discuss</strong>
+                                <span>Godard pabst prism fam cliche.</span>
+                            </a>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+                            <a href="#" class="mini-box">
+                                <i class="confusion_img"><img src="\src\assests\images\confusion_logo.png" alt="" /></i>
+                                <strong>Revise</strong>
+                                <span>Godard pabst prism fam cliche.</span>
+                            </a>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+                            <a href="#" class="mini-box">
+                                <i class="confusion_img"><img src="\src\assests\images\confusion_logo.png" alt="" /></i>
+                                <strong>Approve</strong>
+                                <span>Godard pabst prism fam cliche.</span>
+                            </a>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+                            <a href="#" class="mini-box">
+                                <i class="confusion_img"><img src="\src\assests\images\confusion_logo.png" alt="" /></i>
+                                <strong>Launch</strong>
+                                <span>Godard pabst prism fam cliche.</span>
+                            </a>
+                        </div>
                     </div>
-                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
-                        <a href="#" class="mini-box">
-                            <i class="confusion_img"><img src="\src\assests\images\confusion_logo.png" alt=""/></i>
-                            <strong>Sketch Up</strong>
-                            <span>Godard pabst prism fam cliche.</span>
-                        </a>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
-                        <a href="#" class="mini-box">
-                            <i class="confusion_img"><img src="\src\assests\images\confusion_logo.png" alt=""/></i>
-                            <strong>Discuss</strong>
-                            <span>Godard pabst prism fam cliche.</span>
-                        </a>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
-                        <a href="#" class="mini-box">
-                            <i class="confusion_img"><img src="\src\assests\images\confusion_logo.png" alt=""/></i>
-                            <strong>Revise</strong>
-                            <span>Godard pabst prism fam cliche.</span>
-                        </a>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
-                        <a href="#" class="mini-box">
-                            <i class="confusion_img"><img src="\src\assests\images\confusion_logo.png" alt=""/></i>
-                            <strong>Approve</strong>
-                            <span>Godard pabst prism fam cliche.</span>
-                        </a>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
-                        <a href="#" class="mini-box">
-                            <i class="confusion_img"><img src="\src\assests\images\confusion_logo.png" alt=""/></i>
-                            <strong>Launch</strong>
-                            <span>Godard pabst prism fam cliche.</span>
-                        </a>
-                    </div>
+                    {/* <!-- ***** Mini Box End ***** --> */}
                 </div>
-                {/* <!-- ***** Mini Box End ***** --> */}
             </div>
-        </div>
-    </section>
-  )
+        </section>
+    )
 }
 
 export default Parallax

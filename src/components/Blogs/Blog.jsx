@@ -2,6 +2,8 @@ import React from 'react'
 
 import '../Blogs/blog.css'
 
+import { Link } from 'react-router-dom'
+
 const BLog = () => {
   return (
     <section className="section" id="blog">
@@ -22,49 +24,49 @@ const BLog = () => {
             <div className="row">
                 <div className="col-lg-4 col-md-6 col-sm-12">
                     <div className="blog-post-thumb">
-                        <div className="img">
-                            <img src="src\assests\images\blog-item-01.png" alt=""/>
+                        <div className="img img-1">
+                           
                         </div>
                         <div className="blog-content">
                             <h3>
-                                <a href="#">Vivamus ac vehicula dui</a>
+                                <Link to="/blog-1">Clutural Event</Link>
                             </h3>
                             <div className="text">
                                Cras aliquet ligula dui, vitae fermentum velit tincidunt id. Praesent eu finibus nunc. Nulla in sagittis eros. Aliquam egestas augue.
                             </div>
-                            <a href="#" className="main-button">Read More</a>
+                            <Link to="/blog-1" className="main-button">Read More</Link>
                         </div>
                     </div>
                 </div>
                 <div className="col-lg-4 col-md-6 col-sm-12">
                     <div className="blog-post-thumb">
-                        <div className="img">
-                            <img src="src\assests\images\blog-item-02.png" alt=""/>
+                        <div className="img img-2">
+
                         </div>
                         <div className="blog-content">
                             <h3>
-                                <a href="#">Phasellus convallis augue</a>
+                                <Link to="/blog-2">Arts Event</Link>
                             </h3>
                             <div className="text">
                                 Aliquam commodo ornare nisl, et scelerisque nisl dignissim ac. Vestibulum finibus urna ut velit venenatis, vel ultrices sapien mattis.
                             </div>
-                            <a href="#" className="main-button">Read More</a>
+                            <Link to="/blog-2" className="main-button">Read More</Link>
                         </div>
                     </div>
                 </div>
                 <div className="col-lg-4 col-md-6 col-sm-12">
                     <div className="blog-post-thumb">
-                        <div className="img">
-                            <img src="src\assests\images\blog-item-03.png" alt=""/>
+                        <div className="img img-3">
+                            
                         </div>
                         <div className="blog-content">
                             <h3>
-                                <a href="#">Nam gravida purus non</a>
+                                <Link to="/blog-3">Sports Event</Link>
                             </h3>
                             <div className="text">
                                 Maecenas eu erat vitae dui convallis consequat vel gravida nulla. Vestibulum finibus euismod odio, ut tempus enim varius eu.
                             </div>
-                            <a href="#" className="main-button">Read More</a>
+                            <Link to="/blog-3" className="main-button">Read More</Link>
                         </div>
                     </div>
                 </div>

@@ -2,7 +2,7 @@ import React from 'react'
 
 const FeatureBigItem = () => {
     return (
-        
+
         <>
             {/* ================================================== LEFT ONE ================================================== */}
             <section class="section padding-top-70 padding-bottom-0" id="features">
@@ -17,7 +17,9 @@ const FeatureBigItem = () => {
                                 <h2 class="section-title">Connect people with similar interests</h2>
                             </div>
                             <div class="left-text">
-                                <p>Nullam sit amet purus libero. Etiam ullamcorper nisl ut augue blandit, at finibus leo efficitur. Nam gravida purus non sapien auctor, ut aliquam magna ullamcorper.</p>
+                                <p>Looking for communities where people share similar interests as you?
+                                    Well, your search is over.
+                                    Whether it's gaming or athletics or music, we have an event lined up for you.</p>
                             </div>
                         </div>
                     </div>
@@ -29,7 +31,7 @@ const FeatureBigItem = () => {
                 </div>
             </section>
 
-       {/* ================================================== RIGHT ONE ================================================== */}
+            {/* ================================================== RIGHT ONE ================================================== */}
             <section class="section padding-bottom-100">
                 <div class="container">
                     <div class="row">
@@ -38,7 +40,8 @@ const FeatureBigItem = () => {
                                 <h2 class="section-title">We can help you sharpen your skills</h2>
                             </div>
                             <div class="left-text">
-                                <p>Aenean pretium, ipsum et porttitor auctor, metus ipsum iaculis nisi, a bibendum lectus libero vitae urna. Sed id leo eu dolor luctus congue sed eget ipsum. Nunc nec luctus libero. Etiam quis dolor elit.</p>
+                                <p>Our communities have people with varying levels of skills.
+                                    So whether you're a novice or a grandmaster you can always sharpen your skills.</p>
                             </div>
                         </div>
                         <div class="col-lg-1"></div>

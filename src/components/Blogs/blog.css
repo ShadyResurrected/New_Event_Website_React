@@ -71,4 +71,21 @@ blog
   .blog-list .blog-post-thumb {
     text-align: left;
   }
-  
+  .blog-post-thumb .img-1{
+    background: url(../../assests/images/Blog_Images/cultural-04.jpg);
+    background-position: center;
+    background-size: contain;
+
+  }
+  .blog-post-thumb .img-2{
+    background: url(../../assests/images/Blog_Images/Arts/Arts-02.jpg);
+    background-position: center;
+    background-size: contain;
+
+  }
+  .blog-post-thumb .img-3{
+    background: url(../../assests/images/Blog_Images/Sports/sports-05.jpg);
+    background-position: center;
+    background-size: cover;
+
+  }

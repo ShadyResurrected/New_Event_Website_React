@@ -9,7 +9,7 @@ import WelcomeHome from '../Welcome Background/WelcomeHome'
 import EventStat from '../Events Stats/EventStat';
 import Blog from '../Blogs/BLog';
 import ContactUs from '../Contact/ContactUs';
-import Footer from '../Footer/Footer';
+
 
 const Home = () => {
   return (
@@ -23,7 +23,6 @@ const Home = () => {
         <EventStat />
         <Blog />
         <ContactUs />
-        <Footer />
     </div>
   )
 }
