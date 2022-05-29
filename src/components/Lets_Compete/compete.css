@@ -6,23 +6,185 @@
 .compete-modal-area {
     height: 90vh;
     width: 80vw;
-    background: #fff;
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
     border-radius: 2rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
+    padding: 2rem;
     margin-top: 9rem;
+    margin-bottom: 9rem;
 }
-.compete-poster{
-    height: 300px;
-    width: 300px;
-    background-color: #000;
-    border-radius: 2rem;
-}
-.compete-poster-row-1{
+.events-schedule-row{
     display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 50%;
 }
-.compete-poster-row-2{
-    display: flex;
+.circle-state {
+    /* border: 2px solid black; */
+    height: 12rem;
+    width: 12rem;
+    border-radius: 50%;
+    margin-top: 2rem;
+    text-align: center;
+    line-height: 11rem;
+}
+
+.outer{
+	position: relative;
+	background: linear-gradient(#14ffe9,#ffeb3b,#ff00e0);
+}
+.outer span{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.outer > div{
+	z-index: 9;
+	position: relative;
+	height: 11rem;
+	width: 11rem;
+	/* border: 2px solid black; */
+	border-radius: 50%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background: rgba(255, 254, 254, 0.801);
+	color: #000;
+	font-weight: 700;
+}
+.outer span{
+	height: 100%;
+	width: 100%;
+	background: inherit;
+}
+.circle span{
+	border-radius: 50%;
+}
+.outer span:nth-child(1){
+	filter: blur(7px);
+}
+.outer span:nth-child(2){
+	filter: blur(14px);
+}
+.outer{
+	animation: rotate 1.5s linear infinite;
+}
+@keyframes rotate {
+	0%{
+		filter: hue-rotate(0deg);
+	}
+	100%{
+		filter: hue-rotate(360deg);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+.cards_2 {
+	display: flex;
+    justify-content: space-around;
+	gap: 1rem;
+    margin-top: 2rem;
+}
+
+.card_2 {
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	align-items: flex-end;
+	height: 22rem;
+	width: 16rem;
+	border-radius: 1rem;
+	box-shadow: 0 0 2px #ffffff80;
+}
+
+.card_2.one {
+	background-image: url("../../assests/images/posters/gaming_event.png");
+}
+
+.card_2.two {
+	background-image: url("../../assests/images/posters/coding_event.png");
+}
+
+.card_2.three {
+	background-image: url("../../assests/images/posters/dance_event.png");
+}
+.card_2.four {
+	background-image: url("../../assests/images/posters/arts_event.png");
+}
+
+.details {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	background-color: #ffffff10;
+	border-top: 1px solid #ffffff30;
+	border-radius: 1rem;
+	-webkit-backdrop-filter: blur(0.75rem);
+	/* backdrop-filter: blur(0.75rem); */
+	transition: ease 0.5s;
+    margin-top: 14rem;
+	display: none;
+}
+
+.details:hover {
+	padding-top: 0.5rem;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 2rem 1rem;
+}
+
+.content h2 {
+	color: #ffffffdd;
+	font-size: 1.25rem;
+	margin-bottom: 0.5rem;
+}
+
+.content p {
+	color: #ffffffaa;
+	margin-bottom: 1.5rem;
+	text-align: center;
+}
+
+.content a {
+	background-image: linear-gradient(
+		90deg,
+		#ffffffaa 0%,
+		#ffffffee 50%,
+		#ffffffaa 100%
+	);
+	background-size: 200%;
+	font-size: 0.8rem;
+	font-weight: 700;
+	letter-spacing: 0.1rem;
+	color: #000000bb;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 0.75rem 4rem;
+	border-radius: 0.5rem;
+	box-shadow: 0 0.5rem 10px -3px #00000025;
+	transition: 0.5s;
+}
+
+.content a:hover {
+	background-position: right;
+}
+.card_2:hover .details{
+	display: flex;
+	backdrop-filter: blur(0.75rem);
 }

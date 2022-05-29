@@ -12,6 +12,10 @@ header
     color: #fff;
   }
 
+  .SignInbtn:focus{
+    outline: 0;
+  }
+
 .newlogo img {
     height: 79px;
     margin-left: 20px;

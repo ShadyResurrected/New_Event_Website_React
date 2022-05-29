@@ -22,43 +22,43 @@ const Parallax = () => {
                         <div class="col-lg-2 col-md-3 col-sm-6 col-6">
                             <a href="#" class="mini-box">
                                 <i class="confusion_img"><img src="\src\assests\images\confusion_logo.png" alt="" /></i>
-                                <strong>Get Ideas</strong>
-                                <span>Godard pabst prism fam cliche.</span>
+                                <strong>Rishab Tripathi</strong>
+                                <span>Congratulations on securing a decent position</span>
                             </a>
                         </div>
                         <div class="col-lg-2 col-md-3 col-sm-6 col-6">
                             <a href="#" class="mini-box">
                                 <i class="confusion_img"><img src="\src\assests\images\confusion_logo.png" alt="" /></i>
-                                <strong>Sketch Up</strong>
-                                <span>Godard pabst prism fam cliche.</span>
+                                <strong>Nishant Joshi</strong>
+                                <span>Congratulations on securing a decent position</span>
                             </a>
                         </div>
                         <div class="col-lg-2 col-md-3 col-sm-6 col-6">
                             <a href="#" class="mini-box">
                                 <i class="confusion_img"><img src="\src\assests\images\confusion_logo.png" alt="" /></i>
-                                <strong>Discuss</strong>
-                                <span>Godard pabst prism fam cliche.</span>
+                                <strong>Gaurav Singh</strong>
+                                <span>Congratulations on securing a decent position</span>
                             </a>
                         </div>
                         <div class="col-lg-2 col-md-3 col-sm-6 col-6">
                             <a href="#" class="mini-box">
                                 <i class="confusion_img"><img src="\src\assests\images\confusion_logo.png" alt="" /></i>
-                                <strong>Revise</strong>
-                                <span>Godard pabst prism fam cliche.</span>
+                                <strong>Diksha Joshi</strong>
+                                <span>Congratulations on securing a decent position</span>
                             </a>
                         </div>
                         <div class="col-lg-2 col-md-3 col-sm-6 col-6">
                             <a href="#" class="mini-box">
                                 <i class="confusion_img"><img src="\src\assests\images\confusion_logo.png" alt="" /></i>
-                                <strong>Approve</strong>
-                                <span>Godard pabst prism fam cliche.</span>
+                                <strong>Kartik Pandey</strong>
+                                <span>Congratulations on securing a decent position</span>
                             </a>
                         </div>
                         <div class="col-lg-2 col-md-3 col-sm-6 col-6">
                             <a href="#" class="mini-box">
                                 <i class="confusion_img"><img src="\src\assests\images\confusion_logo.png" alt="" /></i>
-                                <strong>Launch</strong>
-                                <span>Godard pabst prism fam cliche.</span>
+                                <strong>Smriti Verma</strong>
+                                <span>Congratulations on securing a decent position</span>
                             </a>
                         </div>
                     </div>

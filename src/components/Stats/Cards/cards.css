@@ -1,0 +1,25 @@
+.Cards-1 {
+    display: flex;
+    gap: 10px;
+}
+
+.parentContainer{
+    width: 100%;
+}
+
+/* =============================== For Tablet =========================== */
+@media screen and (max-width: 1200px){
+    .Cards{
+        flex-direction: column;
+    }
+    .parentContainer{
+        height: 9rem;
+    }
+}
+
+/* =============================== For Phone =========================== */
+@media screen and (max-width: 768px){
+    .Cards{
+        width: 90%;
+    }
+}

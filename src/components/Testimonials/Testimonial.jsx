@@ -27,13 +27,13 @@ const Testimonial = () => {
                     <div class="team-item">
                         <div class="team-content">
                             <i><img src="\src\assests\images\testimonial-icon.png" alt=""/></i>
-                            <p>Proin a neque nisi. Nam ipsum nisi, venenatis ut nulla quis, egestas scelerisque orci. Maecenas a finibus odio.</p>
+                            <p>They ensure every body is entertained and nobody is bored. Always enjoy being part of their events.</p>
                             <div class="user-image">
                                 <img src="\src\assests\images\confusion_logo.png" alt=""/>
                             </div>
                             <div class="team-info">
-                                <h3 class="user-name">Catherine Soft</h3>
-                                <span>Managing Director</span>
+                                <h3 class="user-name">Monica Rawat</h3>
+                                <span>Professional dancer</span>
                             </div>
                         </div>
                     </div>
@@ -45,12 +45,12 @@ const Testimonial = () => {
                     <div class="team-item">
                         <div class="team-content">
                             <i><img src="\src\assests\images\testimonial-icon.png" alt=""/></i>
-                            <p>Integer molestie aliquam gravida. Nullam nec arcu finibus, imperdiet nulla vitae, placerat nibh. Cras maximus venenatis molestie.</p>
+                            <p>With this platform I have been able to explore many interests and have made friends in various communities, just in a span of 6 months. I wish I knew it existed before.</p>
                             <div class="user-image">
                                 <img src="\src\assests\images\confusion_logo.png" alt=""/>
                             </div>
                             <div class="team-info">
-                                <h3 class="user-name">Kelvin Wood</h3>
+                                <h3 class="user-name">Irfan Khan</h3>
                                 <span>Digital Marketer</span>
                             </div>
                         </div>
@@ -63,13 +63,14 @@ const Testimonial = () => {
                     <div class="team-item">
                         <div class="team-content">
                             <i><img src="\src\assests\images\testimonial-icon.png" alt=""/></i>
-                            <p>Quisque diam odio, maximus ac consectetur eu, auctor non lorem. Cras quis est non ante ultrices molestie. Ut vehicula et diam at aliquam.</p>
+                            <p>I have enjoyed being part of various communities here.
+Not only do they do the conventional stuff like football, esports, and chess, but also let you explore things like paragliding. </p>
                             <div class="user-image">
                                 <img src="\src\assests\images\confusion_logo.png" alt=""/>
                             </div>
                             <div class="team-info">
-                                <h3 class="user-name">David Martin</h3>
-                                <span>Website Manager</span>
+                                <h3 class="user-name">Ishan Kapoor</h3>
+                                <span>University Student</span>
                             </div>
                         </div>
                     </div>

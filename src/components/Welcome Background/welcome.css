@@ -58,6 +58,11 @@ welcome
     color: #fff;
     height: 2rem;
     transform: scale(2);
+    padding: 4px;
+}
+
+.start-btn:focus{
+  outline: 0;
 }
 
 .forward-icon{

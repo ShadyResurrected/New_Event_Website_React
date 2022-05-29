@@ -7,7 +7,7 @@ import Testimonial from '../Testimonials/Testimonial';
 import Pricing from '../Pricing Plans/Pricing';
 import WelcomeHome from '../Welcome Background/WelcomeHome'
 import EventStat from '../Events Stats/EventStat';
-import Blog from '../Blogs/BLog';
+import Blog from '../Blogs/Blog';
 import ContactUs from '../Contact/ContactUs';
 
 

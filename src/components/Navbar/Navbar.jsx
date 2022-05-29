@@ -5,25 +5,32 @@ import '../Navbar/navbar.css'
 import { useState } from 'react';
 
 import { Link } from 'react-router-dom';
+import {unstable_HistoryRouter as useHistory} from 'react-router-dom'
 
 import { signInWithGoogle } from '../../Backend/Firebase';
 
 const Navbar = () => {
 
-    const [LabelName, setLabelName] = useState("Sign In");
+    const [LabelName, setLabelName] = useState(false);
 
-    const WrapperFunction = () => {
-        signInWithGoogle();
-        if (LabelName === "Sign In") {
-            setLabelName("Log Out");
-        } else
-            LogOut();
+    const WrapperFunction = async() => {
+        // setLabelName(!LabelName);
+        if(LabelName == false){
+            await signInWithGoogle();
+            // await window.location.reload();
+        }else{
+            localStorage.clear();
+            setLabelName(false); 
+        }
+        if(localStorage.getItem("name") !== null){
+            setLabelName(true);
+        }
     }
 
-    const LogOut = () => {
-        localStorage.clear();
-        setLabelName("Sign In");
-    }
+    // const LogOut = async() => {
+    //     await localStorage.clear();
+    //     setLabelName(false);
+    // }
     return (
         <header className="header-area header-sticky">
             <div className="container">
@@ -42,7 +49,7 @@ const Navbar = () => {
                                         <li><a href="#pricing-plans">Events</a></li>
                                         <li><a href="#blog">Updates</a></li>
                                         <li><a href="#contact-us">Contact Us</a></li>
-                                        <li><a ><button className="SignInbtn" onClick={WrapperFunction}>{LabelName}</button></a></li>
+                                        <li><a ><button className="SignInbtn" onClick={() => WrapperFunction()}>{LabelName ? "Log Out" : "Sign In" }</button></a></li>
                                     </ul>
                             <a className='menu-trigger'>
                                 <span>Menu</span>

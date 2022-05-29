@@ -32,7 +32,7 @@ const BLog = () => {
                                 <Link to="/blog-1">Clutural Event</Link>
                             </h3>
                             <div className="text">
-                               Cras aliquet ligula dui, vitae fermentum velit tincidunt id. Praesent eu finibus nunc. Nulla in sagittis eros. Aliquam egestas augue.
+                            A platform for renowned classical dancers in India to showcase India's cultural depth through various dance forms including Odissi......
                             </div>
                             <Link to="/blog-1" className="main-button">Read More</Link>
                         </div>
@@ -45,10 +45,10 @@ const BLog = () => {
                         </div>
                         <div className="blog-content">
                             <h3>
-                                <Link to="/blog-2">Arts Event</Link>
+                                <Link to="/blog-2">Arts Events</Link>
                             </h3>
                             <div className="text">
-                                Aliquam commodo ornare nisl, et scelerisque nisl dignissim ac. Vestibulum finibus urna ut velit venenatis, vel ultrices sapien mattis.
+                            “Art is Not What You See, But What You Make Others See!” With this same belief, Fine Arts provide a huge platform to Art Enthusiasts of BIAS, Bhimtal. This independent society is free to join and provides the required .....
                             </div>
                             <Link to="/blog-2" className="main-button">Read More</Link>
                         </div>
@@ -64,7 +64,7 @@ const BLog = () => {
                                 <Link to="/blog-3">Sports Event</Link>
                             </h3>
                             <div className="text">
-                                Maecenas eu erat vitae dui convallis consequat vel gravida nulla. Vestibulum finibus euismod odio, ut tempus enim varius eu.
+                            A fun and competitive game ‘Sack Race’ was conducted for BIAS, Bhimtal students. The objective of the activity was to encourage........
                             </div>
                             <Link to="/blog-3" className="main-button">Read More</Link>
                         </div>

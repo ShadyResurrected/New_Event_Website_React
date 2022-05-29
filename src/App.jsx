@@ -11,13 +11,19 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 import Home from './components/Home/Home'
 
-import Communities from './components/Communities/communities'
+import Communities from './components/Communities/Communities'
 import Stats from './components/Stats/Stats'
 import Footer from './components/Footer/Footer';
 import Blog1 from './components/Blogs/Blog1'
 import Blog2 from './components/Blogs/Blog2'
 import Blog3 from './components/Blogs/Blog3'
 import Compete from './components/Lets_Compete/Compete'
+import E_Sports from './components/Communities/E_Sports_Community/E_Sports'
+import Coding from './components/Communities/Coding_Community/Coding'
+import Sports from './components/Communities/Sports_Community/Sports'
+import Arts from './components/Communities/Arts_Community/Arts'
+import Checkout from './components/Checkout/Checkout'
+
 
 
 function App() {
@@ -33,6 +39,11 @@ function App() {
           <Route path="/blog-2" element={<Blog2 />} />
           <Route path="/blog-3" element={<Blog3 />} />
           <Route path="/compete" element={<Compete />} />
+          <Route path="/e_sports" element={<E_Sports />} />
+          <Route path="/coding" element={<Coding />} />
+          <Route path="/sports" element={<Sports />} />
+          <Route path="/arts" element={<Arts />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Routes>
         <Footer />
       </BrowserRouter>

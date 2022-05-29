@@ -8,7 +8,7 @@ const Blog1 = () => {
             <section className="blog2-modal">
                 <div className="blog2-description-section container">
                     <div className="blog2-heading">
-                    Fine Arts Society Event
+                        Fine Arts Society Events
                         <div className="blog2-heading-separator-horizontal"></div>
                     </div>
                     <div className="blog2-description-main-content">
@@ -21,7 +21,12 @@ const Blog1 = () => {
                         <div className="blog2-heading-separator-vertical"></div>
 
                         <div className="blog2-description-info blog2-box">
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi veniam dolores ratione doloribus consectetur ullam maiores harum repellendus deserunt, optio autem laborum similique quod temporibus possimus cupiditate soluta iste saepe quo nam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam accusantium obcaecati quibusdam ut asperiores, repudiandae a mollitia dolores ex suscipit sunt sint! Officiis hic dolores, at veritatis ipsam incidunt deleniti et recusandae aliquid id, tempore deserunt. Error est reprehenderit suscipit provident ex, placeat nisi alias quidem repellat repudiandae nobis assumenda officiis cupiditate quos quibusdam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem nobis ea optio quo adipisci dolore ex repellat placeat exercitationem saepe ipsam amet alias voluptas recusandae quidem soluta, aperiam dignissimos in? Ab non perspiciatis delectus animi laudantium, obcaecati nisi velit. Iure quaerat aliquam quis fugiat quas hic at maxime animi inventore repellat! Voluptas assumenda cupiditate corporis tenetur saepe, ipsa, aut, dolor ad culpa dignissimos repellat libero. </p>
+                            <p>“Art is Not What You See, But What You Make Others See!” With this same belief, Fine Arts provide a huge platform to Art Enthusiasts of BIAS, Bhimtal. This independent society is free to join and provides the required environment to nurture the artist
+                                in oneself in BIAS, Bhimtal. This society helps maintain the scenic beauty of the college and painting the canteen wall.
+                                Woodsy is prominent festival for Hostel students. Every year hostellites celebrate Woodsy in college campus. Main aim of the festival is to increase interaction between the first years and their seniors. Hostel life is all about bonding and interactions with each other, and Woodsy plays an important role in building this.
+
+
+                                Enthusia is our annual fine arts festival, to be held in the month of December. It is a platform for students of BIAS as well as other colleges to showcase their talent in the field of fine arts. Enthusia has inter-college as well as intra-college events in a variety of art forms. Enthusia provides the students with the much-needed mental activity amidst their busy academic schedule.</p>
                         </div>
                     </div>
                 </div>

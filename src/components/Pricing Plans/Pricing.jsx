@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { Link } from 'react-router-dom'
+
 import '../Pricing Plans/pricing.css'
 
 const Pricing = () => {
@@ -36,16 +38,16 @@ const Pricing = () => {
                                     <span class="period">per person</span>
                                 </div>
                                 <ul class="list">
-                                    <li class="active">10 Participants</li>
-                                    <li class="active">Prize Pool</li>
-                                    <li class="active">Event Type</li>
-                                    <li class="active">Date to be held</li>
+                                    <li class="active">56 Participants</li>
+                                    <li class="active">Prize Pool - ₹5000</li>
+                                    <li class="active">Event type - Coding</li>
+                                    <li class="active">Date to be held - 30 May 2022</li>
                                     <li class="active">1hr duration</li>
                                     <li>Refund</li>
                                 </ul>
                             </div>
                             <div class="pricing-footer">
-                                <a href="#" class="main-button">Register Now</a>
+                                <Link to="/checkout" class="main-button">Register Now</Link>
                             </div>
                         </div>
                     </div>
@@ -60,20 +62,20 @@ const Pricing = () => {
                             <div class="pricing-body">
                                 <div class="price-wrapper">
                                     <span class="currency">₹</span>
-                                    <span class="price">120</span>
+                                    <span class="price">50</span>
                                     <span class="period">per team</span>
                                 </div>
                                 <ul class="list">
-                                    <li class="active">10 Participants</li>
-                                    <li class="active">Prize Pool</li>
-                                    <li class="active">Event type</li>
-                                    <li class="active">Date to be held</li>
-                                    <li class="active">1hr duration</li>
+                                    <li class="active">80 Participants</li>
+                                    <li class="active">Prize Pool - ₹9000</li>
+                                    <li class="active">Event type - ESports</li>
+                                    <li class="active">Date to be held - 12 June 2022</li>
+                                    <li class="active">4hr duration</li>
                                     <li>Refund</li>
                                 </ul>
                             </div>
                             <div class="pricing-footer">
-                                <a href="#" class="main-button">Register Now</a>
+                            <Link to="/checkout" class="main-button">Register Now</Link>
                             </div>
                         </div>
                     </div>
@@ -88,20 +90,20 @@ const Pricing = () => {
                             <div class="pricing-body">
                                 <div class="price-wrapper">
                                     <span class="currency">₹</span>
-                                    <span class="price">30</span>
+                                    <span class="price">50</span>
                                     <span class="period">per person</span>
                                 </div>
                                 <ul class="list">
-                                    <li class="active">10 Participants</li>
-                                    <li class="active">Prize Pool</li>
-                                    <li class="active">Event type</li>
-                                    <li class="active">Date to be held</li>
-                                    <li class="active">1hr duration</li>
+                                    <li class="active">17 Participants</li>
+                                    <li class="active">Prize Pool - ₹7000</li>
+                                    <li class="active">Event type - Coding</li>
+                                    <li class="active">Date to be held - 04 April 2022</li>
+                                    <li class="active">2hr duration</li>
                                     <li>Refund</li>
                                 </ul>
                             </div>
                             <div class="pricing-footer">
-                                <a href="#" class="main-button">Register Now</a>
+                            <Link to="/checkout" class="main-button">Register Now</Link>
                             </div>
                         </div>
                     </div>
