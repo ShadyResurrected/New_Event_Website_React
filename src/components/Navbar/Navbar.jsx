@@ -49,6 +49,7 @@ const Navbar = () => {
                                         <li><a href="#pricing-plans">Events</a></li>
                                         <li><a href="#blog">Updates</a></li>
                                         <li><a href="#contact-us">Contact Us</a></li>
+                                        <li><a href="https://delightful-donut-a910f2.netlify.app/">Compiler</a></li>
                                         <li><a ><button className="SignInbtn" onClick={() => WrapperFunction()}>{LabelName ? "Log Out" : "Sign In" }</button></a></li>
                                     </ul>
                             <a className='menu-trigger'>
