@@ -1,5 +1,8 @@
 import React from 'react'
 
+import Limage from '../../assests/images/left-image.png'
+import Rimage from '../../assests/images/right-image.png'
+
 const FeatureBigItem = () => {
     return (
 
@@ -9,7 +12,7 @@ const FeatureBigItem = () => {
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-5 col-md-12 col-sm-12 align-self-center" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
-                            <img src="..\..\src\assests\images\left-image.png" class="rounded img-fluid d-block mx-auto" alt="App" />
+                            <img src={Limage} class="rounded img-fluid d-block mx-auto" alt="App" />
                         </div>
                         <div class="col-lg-1"></div>
                         <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-top-fix">
@@ -46,7 +49,7 @@ const FeatureBigItem = () => {
                         </div>
                         <div class="col-lg-1"></div>
                         <div class="col-lg-5 col-md-12 col-sm-12 align-self-center mobile-bottom-fix-big" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
-                            <img src="..\src\assests\images\right-image.png" class="rounded img-fluid d-block mx-auto" alt="App" />
+                            <img src={Rimage} class="rounded img-fluid d-block mx-auto" alt="App" />
                         </div>
                     </div>
                 </div>

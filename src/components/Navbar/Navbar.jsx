@@ -7,7 +7,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {unstable_HistoryRouter as useHistory} from 'react-router-dom'
 
-import { signInWithGoogle } from '../../Backend/Firebase';
+import { signInWithGoogle } from '../../Firebase.js'
 
 const Navbar = () => {
 

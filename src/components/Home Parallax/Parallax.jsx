@@ -2,6 +2,8 @@ import React from 'react'
 
 import '../Home Parallax/parallax.css'
 
+import Person from '../../assests/images/confusion_logo.png'
+
 const Parallax = () => {
     return (
         <section class="mini" id="work-process">
@@ -21,42 +23,42 @@ const Parallax = () => {
                     <div class="row">
                         <div class="col-lg-2 col-md-3 col-sm-6 col-6">
                             <a href="#" class="mini-box">
-                                <i class="confusion_img"><img src="\src\assests\images\confusion_logo.png" alt="" /></i>
+                                <i class="confusion_img"><img src={Person} alt="" /></i>
                                 <strong>Rishab Tripathi</strong>
                                 <span>Congratulations on securing a decent position</span>
                             </a>
                         </div>
                         <div class="col-lg-2 col-md-3 col-sm-6 col-6">
                             <a href="#" class="mini-box">
-                                <i class="confusion_img"><img src="\src\assests\images\confusion_logo.png" alt="" /></i>
+                                <i class="confusion_img"><img src={Person} alt="" /></i>
                                 <strong>Nishant Joshi</strong>
                                 <span>Congratulations on securing a decent position</span>
                             </a>
                         </div>
                         <div class="col-lg-2 col-md-3 col-sm-6 col-6">
                             <a href="#" class="mini-box">
-                                <i class="confusion_img"><img src="\src\assests\images\confusion_logo.png" alt="" /></i>
+                                <i class="confusion_img"><img src={Person} alt="" /></i>
                                 <strong>Gaurav Singh</strong>
                                 <span>Congratulations on securing a decent position</span>
                             </a>
                         </div>
                         <div class="col-lg-2 col-md-3 col-sm-6 col-6">
                             <a href="#" class="mini-box">
-                                <i class="confusion_img"><img src="\src\assests\images\confusion_logo.png" alt="" /></i>
+                                <i class="confusion_img"><img src={Person} alt="" /></i>
                                 <strong>Diksha Joshi</strong>
                                 <span>Congratulations on securing a decent position</span>
                             </a>
                         </div>
                         <div class="col-lg-2 col-md-3 col-sm-6 col-6">
                             <a href="#" class="mini-box">
-                                <i class="confusion_img"><img src="\src\assests\images\confusion_logo.png" alt="" /></i>
+                                <i class="confusion_img"><img src={Person} alt="" /></i>
                                 <strong>Kartik Pandey</strong>
                                 <span>Congratulations on securing a decent position</span>
                             </a>
                         </div>
                         <div class="col-lg-2 col-md-3 col-sm-6 col-6">
                             <a href="#" class="mini-box">
-                                <i class="confusion_img"><img src="\src\assests\images\confusion_logo.png" alt="" /></i>
+                                <i class="confusion_img"><img src={Person} alt="" /></i>
                                 <strong>Smriti Verma</strong>
                                 <span>Congratulations on securing a decent position</span>
                             </a>
