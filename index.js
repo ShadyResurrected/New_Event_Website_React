@@ -13,7 +13,7 @@ app.use(
 );
 
 mongoose
-  .connect('mongodb://localhost:27017/event')
+  .connect('mongodb+srv://admin:admin@cluster0.g1z7t4t.mongodb.net/?retryWrites=true&w=majority')
   .then(() => {
     console.log('DB up');
   })
@@ -36,6 +36,6 @@ app.get('/status', (req, res) => {
 app.use('/api', authRoutes);
 app.use('/api', eventRoutes);
 
-app.listen(8000, () => {
+app.listen(8001, () => {
   console.log('Server running up.');
 });
