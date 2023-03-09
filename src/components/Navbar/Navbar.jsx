@@ -2,35 +2,17 @@ import React from 'react'
 import Logo from '../../assests/images/newlogo.png'
 import '../Navbar/navbar.css'
 
-import { useState } from 'react';
+import { Link,useNavigate } from 'react-router-dom';
 
-import { Link } from 'react-router-dom';
-import {unstable_HistoryRouter as useHistory} from 'react-router-dom'
-
-import { signInWithGoogle } from '../../Firebase.js'
 
 const Navbar = () => {
 
-    const [LabelName, setLabelName] = useState(false);
+    const navigate = useNavigate();
 
-    const WrapperFunction = async() => {
-        // setLabelName(!LabelName);
-        if(LabelName == false){
-            await signInWithGoogle();
-            // await window.location.reload();
-        }else{
-            localStorage.clear();
-            setLabelName(false); 
-        }
-        if(localStorage.getItem("name") !== null){
-            setLabelName(true);
-        }
+    const navigateToAuth = () => {
+        navigate('/login');
     }
 
-    // const LogOut = async() => {
-    //     await localStorage.clear();
-    //     setLabelName(false);
-    // }
     return (
         <header className="header-area header-sticky">
             <div className="container">
@@ -50,7 +32,7 @@ const Navbar = () => {
                                         <li><a href="#blog">Updates</a></li>
                                         <li><a href="#contact-us">Contact Us</a></li>
                                         <li><a href="https://delightful-donut-a910f2.netlify.app/">Compiler</a></li>
-                                        <li><a ><button className="SignInbtn" onClick={() => WrapperFunction()}>{LabelName ? "Log Out" : "Sign In" }</button></a></li>
+                                        <li><a ><button className="SignInbtn" onClick={navigateToAuth}>Sign In</button></a></li>
                                     </ul>
                             <a className='menu-trigger'>
                                 <span>Menu</span>
