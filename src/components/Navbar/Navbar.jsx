@@ -2,7 +2,7 @@ import React from 'react'
 import Logo from '../../assests/images/newlogo.png'
 import '../Navbar/navbar.css'
 
-import { Link,useNavigate } from 'react-router-dom';
+import { Link,useNavigate,NavLink } from 'react-router-dom';
 
 
 const Navbar = () => {
@@ -24,10 +24,10 @@ const Navbar = () => {
                             </Link>                  
                                     <ul className="nav">
                                         
-                                        <li><Link to="/" className="active">Home</Link></li>
-                                        <li><Link to="/stats">Stats</Link></li>
-                                        <li><Link to="/communities">Communities</Link></li>
-                                        <li><Link to="/contest">Contests</Link></li>
+                                        <li><NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')}>Home</NavLink></li>
+                                        <li><NavLink to="/stats" className={({ isActive }) => (isActive ? 'active' : '')}>Stats</NavLink></li>
+                                        <li><NavLink to="/communities" className={({ isActive }) => (isActive ? 'active' : '')}>Communities</NavLink></li>
+                                        <li><NavLink to="/contest" className={({ isActive }) => (isActive ? 'active' : '')}>Contests</NavLink></li>
                                         {/* <li><a href="https://delightful-donut-a910f2.netlify.app/">Compiler</a></li> */}
                                         <li><a ><button className="SignInbtn" onClick={navigateToAuth}>Sign In</button></a></li>
                                     </ul>
