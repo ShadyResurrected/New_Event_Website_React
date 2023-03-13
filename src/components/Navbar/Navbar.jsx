@@ -27,11 +27,8 @@ const Navbar = () => {
                                         <li><Link to="/" className="active">Home</Link></li>
                                         <li><Link to="/stats">Stats</Link></li>
                                         <li><Link to="/communities">Communities</Link></li>
-                                        <li><a href="#work-process">Recent Winners</a></li>
-                                        <li><a href="#pricing-plans">Events</a></li>
-                                        <li><a href="#blog">Updates</a></li>
-                                        <li><a href="#contact-us">Contact Us</a></li>
-                                        <li><a href="https://delightful-donut-a910f2.netlify.app/">Compiler</a></li>
+                                        <li><Link to="/contest">Contests</Link></li>
+                                        {/* <li><a href="https://delightful-donut-a910f2.netlify.app/">Compiler</a></li> */}
                                         <li><a ><button className="SignInbtn" onClick={navigateToAuth}>Sign In</button></a></li>
                                     </ul>
                             <a className='menu-trigger'>

@@ -7,11 +7,11 @@ const RightSide = () => {
   return (
     <div className="RightSide">
         <div>
-        <h3>Updates</h3>
+        <h3 className='mb-3 text-white'>Updates</h3>
         <Updates/>
         </div>
         <div>
-          <h3>Rating</h3>
+          <h3 className='mb-3 text-white'>Rating</h3>
           <CustomerReview/>
         </div>
     </div>

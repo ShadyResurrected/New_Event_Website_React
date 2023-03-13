@@ -1,8 +1,5 @@
 import React from 'react'
-import Logo from '../../../assests/images/logo copy.png'
 import { useState } from 'react'
-
-
 
 import '../Sidebar/sidebar.css'
 
@@ -39,14 +36,6 @@ const sidebarVariants = {
             variants={sidebarVariants}
             animate={window.innerWidth<=768?`${expanded}`:''}
             >
-                <div className="logo">
-                    {/* logo */}
-                    <img src={Logo} alt="" />
-                    <span>
-                        St<span>a</span>ts
-                    </span>
-                </div>
-
                 {/* menu */}
                 {/* <div className="menu">
                     {SidebarData.map((item, index) => {

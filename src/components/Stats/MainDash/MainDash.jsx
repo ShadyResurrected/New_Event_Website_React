@@ -7,7 +7,7 @@ import Table from '../Table/Table'
 const MainDash = () => {
   return (
     <div className="MainDash">
-        <h1>Dashboard</h1>
+        <h1>Badges</h1>
         <Card/>
         <Table/>
     </div>

@@ -65,7 +65,10 @@ header
   }
   
   .header-area .main-nav .nav {
+    display: flex;
+    justify-content: space-between;
     float: right;
+    width: 60rem;
     margin-top: 27px;
     margin-left: 0px;
     margin-right: 30px;

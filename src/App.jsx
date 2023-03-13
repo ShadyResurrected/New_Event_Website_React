@@ -24,6 +24,7 @@ import Sports from "./components/Communities/Sports_Community/Sports";
 import Arts from "./components/Communities/Arts_Community/Arts";
 import Checkout from "./components/Checkout/Checkout";
 import LogIn from "./components/LogIn_SignUp/LogIn";
+import Contest from './components/Contests/Contest'
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
           <Route path="/arts" element={<Arts />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/login" element={<LogIn />} />
+          <Route path="/contest" element={<Contest />} />
         </Routes>
         <Footer />
       </BrowserRouter>
