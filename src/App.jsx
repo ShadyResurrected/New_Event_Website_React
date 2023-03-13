@@ -1,35 +1,33 @@
-import { useState } from 'react'
-import Navbar from './components/Navbar/Navbar'
+import { useState } from "react";
+import Navbar from "./components/Navbar/Navbar";
 
 // import 'bootstrap/dist/css/bootstrap.min.css';
-import '../src/assests/css/bootstrap.min.css'
-import '../src/global.css'
+import "../src/assests/css/bootstrap.min.css";
+import "../src/global.css";
 
-import '../src/assests/css/font-awesome.css'
+import "../src/assests/css/font-awesome.css";
 
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
-import Home from './components/Home/Home'
+import Home from "./components/Home/Home";
 
-import Communities from './components/Communities/Communities'
-import Stats from './components/Stats/Stats'
-import Footer from './components/Footer/Footer';
-import Blog1 from './components/Blogs/Blog1'
-import Blog2 from './components/Blogs/Blog2'
-import Blog3 from './components/Blogs/Blog3'
-import Compete from './components/Lets_Compete/Compete'
-import E_Sports from './components/Communities/E_Sports_Community/E_Sports'
-import Coding from './components/Communities/Coding_Community/Coding'
-import Sports from './components/Communities/Sports_Community/Sports'
-import Arts from './components/Communities/Arts_Community/Arts'
-import Checkout from './components/Checkout/Checkout'
-import LogIn from './components/LogIn_SignUp/LogIn'
-
-
+import Communities from "./components/Communities/Communities";
+import Stats from "./components/Stats/Stats";
+import Footer from "./components/Footer/Footer";
+import Blog1 from "./components/Blogs/Blog1";
+import Blog2 from "./components/Blogs/Blog2";
+import Blog3 from "./components/Blogs/Blog3";
+import Compete from "./components/Lets_Compete/Compete";
+import E_Sports from "./components/Communities/E_Sports_Community/E_Sports";
+import Coding from "./components/Communities/Coding_Community/Coding";
+import Sports from "./components/Communities/Sports_Community/Sports";
+import Arts from "./components/Communities/Arts_Community/Arts";
+import Checkout from "./components/Checkout/Checkout";
+import LogIn from "./components/LogIn_SignUp/LogIn";
 
 function App() {
   return (
-    <div >
+    <div>
       <BrowserRouter>
         <Navbar />
         <Routes>
@@ -49,13 +47,8 @@ function App() {
         </Routes>
         <Footer />
       </BrowserRouter>
-
-
-      
-      
-      
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
