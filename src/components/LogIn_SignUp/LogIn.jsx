@@ -4,6 +4,8 @@ import { Alert } from "react-bootstrap";
 
 import "../LogIn_SignUp/login.css";
 
+import {FcGoogle,FcPhoneAndroid} from 'react-icons/fc'
+
 import { useAuth } from "../../Context/AuthContext";
 
 const LogIn = () => {
@@ -77,10 +79,10 @@ const LogIn = () => {
             <h1>Create Account</h1>
             <div className="social-container">
               <a href="#" className="social">
-                <i className="fab fa-google-plus-g" />
+                <FcGoogle/>
               </a>
               <a href="#" className="social">
-                <i className="fab fa-linkedin-in" />
+                <FcPhoneAndroid/>
               </a>
             </div>
             <span>or use your email for registration</span>
@@ -106,10 +108,10 @@ const LogIn = () => {
             <h1>Sign in</h1>
             <div className="social-container">
               <a href="#" className="social">
-                <i className="fab fa-google-plus-g" />
+              <FcGoogle/>
               </a>
               <a href="#" className="social">
-                <i className="fab fa-linkedin-in" />
+                <FcPhoneAndroid/>
               </a>
             </div>
             <span>or use your account</span>
