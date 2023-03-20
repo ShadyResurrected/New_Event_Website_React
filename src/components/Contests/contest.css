@@ -1,0 +1,29 @@
+.contest__modal {
+  height: 90vh;
+  width: 80vw;
+  background-color: #fff;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.contest__modal__filters {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 6rem;
+}
+
+.filter{
+    width: 13rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filter__dropdown{
+    background-image: linear-gradient(to right, #e350f2, #2e26eb);
+    outline: none;
+    border: 0;
+}

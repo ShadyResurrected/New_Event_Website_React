@@ -86,16 +86,18 @@ const LogIn = () => {
               </a>
             </div>
             <span>or use your email for registration</span>
-            <input type="email" placeholder="Email" ref={singUpEmailRef} />
+            <input type="email" placeholder="Email" ref={singUpEmailRef} required/>
             <input
               type="password"
               placeholder="Password"
               ref={singUpPasswordRef}
+              required
             />
             <input
               type="password"
               placeholder="Confirm Password"
               ref={passwordConfirmRef}
+              required
             />
             <button className="sign_btn" onClick={handleSignUpClick}>
               Sign Up
