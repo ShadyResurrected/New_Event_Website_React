@@ -11,6 +11,8 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 import Home from "./components/Home/Home";
 
+import { Toaster } from "react-hot-toast";
+
 import Communities from "./components/Communities/Communities";
 import Stats from "./components/Stats/Stats";
 import Footer from "./components/Footer/Footer";
@@ -24,17 +26,26 @@ import Sports from "./components/Communities/Sports_Community/Sports";
 import Arts from "./components/Communities/Arts_Community/Arts";
 import Checkout from "./components/Checkout/Checkout";
 import LogIn from "./components/LogIn_SignUp/LogIn";
-import Contest from './components/Contests/Contest'
+import Contest from "./components/Contests/Contest";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
   return (
     <div>
       <BrowserRouter>
+        <Toaster position="bottom-left" reverseOrder={false} />
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/communities" element={<Communities />} />
-          <Route path="/stats" element={<Stats />} />
+          <Route
+            path="/stats"
+            element={
+              <ProtectedRoute>
+                <Stats />
+              </ProtectedRoute>
+            }
+          />
           <Route path="/blog-1" element={<Blog1 />} />
           <Route path="/blog-2" element={<Blog2 />} />
           <Route path="/blog-3" element={<Blog3 />} />
