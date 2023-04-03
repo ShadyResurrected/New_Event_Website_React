@@ -50,10 +50,10 @@ function App() {
           <Route path="/blog-2" element={<Blog2 />} />
           <Route path="/blog-3" element={<Blog3 />} />
           <Route path="/compete" element={<Compete />} />
-          <Route path="/e_sports" element={<E_Sports />} />
-          <Route path="/coding" element={<Coding />} />
-          <Route path="/sports" element={<Sports />} />
-          <Route path="/arts" element={<Arts />} />
+          <Route path="/e_sports" element={<ProtectedRoute><E_Sports /></ProtectedRoute>} />
+          <Route path="/coding" element={<ProtectedRoute><Coding /></ProtectedRoute>} />
+          <Route path="/sports" element={<ProtectedRoute><Sports /></ProtectedRoute>} />
+          <Route path="/arts" element={<ProtectedRoute><Arts /></ProtectedRoute>} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/login" element={<LogIn />} />
           <Route path="/contest" element={<Contest />} />

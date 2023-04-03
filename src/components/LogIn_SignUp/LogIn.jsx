@@ -29,8 +29,7 @@ const LogIn = () => {
   const [emailS, setEmailS] = useState("");
   const [passwordS, setPasswordS] = useState("");
 
-  const { signInWithGoogle, signInWithPhone, setIsAuthorized } =
-    useAuth();
+  const { signInWithGoogle, signInWithPhone, setIsAuthorized } = useAuth();
 
   const handleSignUp = async (e) => {
     e.preventDefault();
@@ -94,7 +93,7 @@ const LogIn = () => {
 
       if (res.data.success === true) {
         setEmailS("");
-        setPasswordS("")
+        setPasswordS("");
 
         setIsAuthorized(true);
 
@@ -111,7 +110,7 @@ const LogIn = () => {
   const handleGoogleSignIn = async () => {
     try {
       const res = await signInWithGoogle();
-      console.log(res)
+      console.log(res);
       toast.success(`Welcome Back, ${res.user.displayName}`);
       navigate("/");
     } catch (err) {
