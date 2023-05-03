@@ -1,7 +1,9 @@
-import { User } from "../models/user.js";
+import { User } from "../models/userModel.js";
 import { sendCookie } from "../utils/feature.js";
 import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
 
+// Registering a user
 export const register = async (req, res) => {
   try {
     // accepting the values from the request
@@ -27,13 +29,14 @@ export const register = async (req, res) => {
       password: hashedPassword,
       username,
     });
-    // sending cookie
+    // After registering the user should not fill again the credentials to login, so a cookie is sent
     sendCookie(user, res, "Registered Successfully", 201);
   } catch (error) {
-    return res.json({ message: error });
+    return res.json({ message: error.message });
   }
 };
 
+// User Login
 export const login = async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -52,19 +55,46 @@ export const login = async (req, res) => {
 
     sendCookie(user, res, `Welcome Back, ${user.username}`, 200);
   } catch (error) {
-    return res.json({ message: error });
+    return res.json({ message: error.message });
   }
 };
 
+// User Logout
 export const logout = (req, res) => {
   try {
     res
       .status(200)
-      .cookie("jwt_token", "", { expires: new Date(Date.now()) })
+      .cookie(
+        "jwt_token",
+        "",
+        { expires: new Date(Date.now()) },
+        {
+          sameSite: process.env.DEVELOPMENT ? "" : process.env.COOKIE_SAMESITE,
+          secure: process.env.DEVELOPMENT ? "" : process.env.COOKIE_SECURE,
+        }
+      )
       .json({
         success: true,
       });
   } catch (error) {
     return res.json({ message: error });
+  }
+};
+
+// Profile
+export const profile = async (req, res) => {
+  try {
+    let id;
+    const { jwt_token } = req.cookies;
+    jwt.verify(jwt_token, process.env.JWT_SECRET, {}, (err, info) => {
+      if (err)
+        return res.status(502).json({ message: "Internal Server Error" });
+      id = info._id;
+    });
+
+    const result = await User.findById(id);
+    res.status(200).json(result);
+  } catch (error) {
+    res.status(502).json({ message: error.message });
   }
 };

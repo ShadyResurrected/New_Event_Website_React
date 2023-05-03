@@ -1,12 +1,23 @@
-import express from 'express'
-import dotenv from 'dotenv'
+import express from "express";
+import dotenv from "dotenv";
+import cors from "cors";
 
-import userRouter from './routes/user.js'
+import userRouter from "./routes/userRoute.js";
+import cookieParser from "cookie-parser";
 
-dotenv.config()
+dotenv.config();
 
-export const app = express()
+export const app = express();
 
-app.use(express.json())
+app.use(express.json()); // accepting the json data from the body
+app.use(cookieParser()); // to access the stored cookie
 
-app.use('/users', userRouter)
+app.use(
+  cors({
+    origin: ["http://localhost:3000"], // website url that should be allowed to access this api
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
+
+app.use("/users", userRouter);
