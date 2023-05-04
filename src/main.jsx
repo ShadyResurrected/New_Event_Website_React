@@ -2,12 +2,13 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
-import { AuthProvider } from './Context/AuthContext'
+
+import {UserContextProvider} from './Context/UserContext'
 
 ReactDOM.render(
   
-    <AuthProvider>
+    <UserContextProvider>
     <App />
-    </AuthProvider>,
+    </UserContextProvider>,
   document.getElementById('root')
 )

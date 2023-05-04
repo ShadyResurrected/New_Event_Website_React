@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Navbar from "./components/Navbar/Navbar";
 
 // import 'bootstrap/dist/css/bootstrap.min.css';
@@ -28,8 +28,23 @@ import Checkout from "./components/Checkout/Checkout";
 import LogIn from "./components/LogIn_SignUp/LogIn";
 import Contest from "./components/Contests/Contest";
 import ProtectedRoute from "./components/ProtectedRoute";
+import { UserContext } from "./Context/UserContext";
+import axios from "axios";
 
 function App() {
+
+  const {user,setUser} = useContext(UserContext)
+
+  useEffect(async() => {
+    await axios
+    .get("http://localhost:8000/users/profile", {
+      withCredentials: true,
+    })
+    .then((res) => {
+      setUser(res.data);
+    });
+  }, [])
+
   return (
     <div>
       <BrowserRouter>
@@ -50,10 +65,38 @@ function App() {
           <Route path="/blog-2" element={<Blog2 />} />
           <Route path="/blog-3" element={<Blog3 />} />
           <Route path="/compete" element={<Compete />} />
-          <Route path="/e_sports" element={<ProtectedRoute><E_Sports /></ProtectedRoute>} />
-          <Route path="/coding" element={<ProtectedRoute><Coding /></ProtectedRoute>} />
-          <Route path="/sports" element={<ProtectedRoute><Sports /></ProtectedRoute>} />
-          <Route path="/arts" element={<ProtectedRoute><Arts /></ProtectedRoute>} />
+          <Route
+            path="/e_sports"
+            element={
+              <ProtectedRoute>
+                <E_Sports />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/coding"
+            element={
+              <ProtectedRoute>
+                <Coding />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/sports"
+            element={
+              <ProtectedRoute>
+                <Sports />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/arts"
+            element={
+              <ProtectedRoute>
+                <Arts />
+              </ProtectedRoute>
+            }
+          />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/login" element={<LogIn />} />
           <Route path="/contest" element={<Contest />} />

@@ -4,7 +4,7 @@ import "../LogIn_SignUp/login.css";
 
 import { FcGoogle, FcPhoneAndroid } from "react-icons/fc";
 
-import { useAuth } from "../../Context/AuthContext";
+import { UserContext } from "../../Context/UserContext";
 
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
@@ -29,7 +29,7 @@ const LogIn = () => {
   const [emailS, setEmailS] = useState("");
   const [passwordS, setPasswordS] = useState("");
 
-  const { signInWithGoogle, signInWithPhone, setIsAuthorized } = useAuth();
+  const { setUser, user } = useContext(UserContext);
 
   const handleSignUp = async (e) => {
     e.preventDefault();
@@ -58,7 +58,13 @@ const LogIn = () => {
         setUsername("");
         setPassword("");
 
-        setIsAuthorized(true);
+        await axios
+          .get("http://localhost:8000/users/profile", {
+            withCredentials: true, // Set withCredentials to true to receive the cookie
+          })
+          .then((res) => {
+            setUser(res.data);
+          });
 
         toast.success(res.data.message);
         return navigate("/");
@@ -95,7 +101,13 @@ const LogIn = () => {
         setEmailS("");
         setPasswordS("");
 
-        setIsAuthorized(true);
+        await axios
+        .get("http://localhost:8000/users/profile", {
+          withCredentials: true, // Set withCredentials to true to receive the cookie
+        })
+        .then((res) => {
+          setUser(res.data);
+        });
 
         toast.success(res.data.message);
         return navigate("/");
@@ -108,14 +120,15 @@ const LogIn = () => {
   };
 
   const handleGoogleSignIn = async () => {
-    try {
-      const res = await signInWithGoogle();
-      console.log(res);
-      toast.success(`Welcome Back, ${res.user.displayName}`);
-      navigate("/");
-    } catch (err) {
-      console.log(err.message);
-    }
+    // try {
+    //   const res = await signInWithGoogle();
+    //   // console.log(res);
+    //   setIsAuthorized(true)
+    //   toast.success(`Welcome Back, ${res.user.displayName}`);
+    //   navigate("/");
+    // } catch (err) {
+    //   console.log(err.message);
+    // }
   };
 
   const handlePhoneSignIn = () => {

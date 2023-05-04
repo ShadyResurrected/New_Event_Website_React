@@ -1,21 +1,22 @@
-import React, { useEffect } from "react";
+import React, { useContext } from "react";
 import Logo from "../../assests/images/newlogo.png";
 import "../Navbar/navbar.css";
 
 import { Link, useNavigate, NavLink } from "react-router-dom";
-import { useAuth } from "../../Context/AuthContext";
 
 import axios from "axios";
 import toast from "react-hot-toast";
+import { UserContext } from "../../Context/UserContext";
 
 const Navbar = () => {
   const navigate = useNavigate();
 
-  const { isAuthorized } = useAuth();
+  const { user } = useContext(UserContext);
 
   const handleClickAuth = async (e) => {
     e.preventDefault();
-    if (!isAuthorized) return navigate("/login");
+
+    if (!user?._id) return navigate("/login");
 
     try {
       const { data } = await axios.get("http://localhost:8000/users/logout", {
@@ -25,7 +26,6 @@ const Navbar = () => {
         toast.loading("Logging Out...");
         setTimeout(() => {
           window.location.reload(false);
-          isAuthorized(false);
         }, 1000);
       } else {
         toast.error("Some error occurred");
@@ -81,7 +81,7 @@ const Navbar = () => {
                 <li>
                   <a>
                     <button className="SignInbtn" onClick={handleClickAuth}>
-                      {!isAuthorized ? "Sign In" : "Log Out"}
+                      {user?._id ? "Log out" : "Sign In"}
                     </button>
                   </a>
                 </li>
