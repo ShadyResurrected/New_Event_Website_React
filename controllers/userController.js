@@ -7,7 +7,8 @@ import jwt from "jsonwebtoken";
 export const register = async (req, res) => {
   try {
     // accepting the values from the request
-    const { name, email, password, username } = req.body;
+    const { name, email, password, username, profilePic, providerId } =
+      req.body;
 
     // finding the user in db
     let user = await User.findOne({ email });
@@ -28,6 +29,8 @@ export const register = async (req, res) => {
       email,
       password: hashedPassword,
       username,
+      profilePic,
+      providerId,
     });
     // After registering the user should not fill again the credentials to login, so a cookie is sent
     sendCookie(user, res, "Registered Successfully", 201);

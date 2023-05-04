@@ -26,6 +26,10 @@ const schema = new mongoose.Schema({
         type : String,
         required : true,
         unique : true
+    },
+    providerId : {
+        type : String,
+        default : "manual"
     }
 })
 
