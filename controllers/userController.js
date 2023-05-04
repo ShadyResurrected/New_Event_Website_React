@@ -87,14 +87,13 @@ export const profile = async (req, res) => {
     let id;
     const { jwt_token } = req.cookies;
     jwt.verify(jwt_token, process.env.JWT_SECRET, {}, (err, info) => {
-      if (err)
-        return res.status(502).json({ message: "Internal Server Error" });
+      if (err) throw err;
       id = info._id;
     });
 
     const result = await User.findById(id);
     res.status(200).json(result);
   } catch (error) {
-    res.status(502).json({ message: error.message });
+    return res.json({ message: error.message });
   }
 };
