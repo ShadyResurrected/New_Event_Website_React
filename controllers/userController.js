@@ -17,7 +17,10 @@ export const register = async (req, res) => {
     if (user)
       return res.json({
         success: false,
-        message: "User already exists",
+        message:
+          user.providerId === "firebase"
+            ? "Email already registered with google"
+            : "User already exists",
       });
 
     // hashing the password
@@ -46,6 +49,7 @@ export const login = async (req, res) => {
 
     // as we have declared select as false in the model we have to also include password field to recieve it, other than email
     const user = await User.findOne({ email }).select("+password");
+
 
     if (!user)
       return res.json({ success: false, message: "Invalid Email or Password" });
