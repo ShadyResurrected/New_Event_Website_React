@@ -1,22 +1,25 @@
-import React from 'react'
+import React, { useContext } from "react";
+import "../Stats/stats.css";
 
-import Sidebar from '../Stats/Sidebar/Sidebar'
-import MainDash from '../Stats/MainDash/MainDash'
-import RightSide from '../Stats/RightSide/RightSide'
+import Sidebar from "../Stats/Sidebar/Sidebar";
+import MainDash from "../Stats/MainDash/MainDash";
+import RightSide from "../Stats/RightSide/RightSide";
 
-import '../Stats/stats.css'
-
+import Profile from "../ProfilePic/Profile";
+import { UserContext } from "../../Context/UserContext";
 
 const Stats = () => {
-    return (
-        <div className="welcome-area">
-        <div className="AppGlass">
-          <Sidebar/>
-          <MainDash/>
-          <RightSide/>
-        </div>
+  const { user } = useContext(UserContext);
+  return (
+    <div className="welcome-area">
+      <div className="AppGlass">
+        <Sidebar />
+        <MainDash />
+        <RightSide />
+        {user?._id ? <Profile /> : ""}
+      </div>
     </div>
-    )
-}
+  );
+};
 
-export default Stats
+export default Stats;

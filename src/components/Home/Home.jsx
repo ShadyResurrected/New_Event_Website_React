@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import FeatureIt from '../Feature Items/FeatureSmallItem';
 import FeatureBigItem from '../Feature Items/FeatureBigItem';
@@ -9,9 +9,13 @@ import WelcomeHome from '../Welcome Background/WelcomeHome'
 import EventStat from '../Events Stats/EventStat';
 import Blog from '../Blogs/Blog';
 import ContactUs from '../Contact/ContactUs';
+import Profile from '../ProfilePic/Profile';
+import { UserContext } from '../../Context/UserContext';
 
 
 const Home = () => {
+
+  const {user} = useContext(UserContext)
   return (
     <div>
         <WelcomeHome />
@@ -23,6 +27,7 @@ const Home = () => {
         <EventStat />
         <Blog />
         <ContactUs />
+        {user?._id ? <Profile/> : ''}
     </div>
   )
 }

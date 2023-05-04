@@ -11,7 +11,7 @@ import { UserContext } from "../../Context/UserContext";
 const Navbar = () => {
   const navigate = useNavigate();
 
-  const { user } = useContext(UserContext);
+  const { user,BASE_URL } = useContext(UserContext);
 
   const handleClickAuth = async (e) => {
     e.preventDefault();
@@ -19,7 +19,7 @@ const Navbar = () => {
     if (!user?._id) return navigate("/login");
 
     try {
-      const { data } = await axios.get("http://localhost:8000/users/logout", {
+      const { data } = await axios.get(`${BASE_URL}/users/logout`, {
         withCredentials: true,
       });
       if (data.success) {

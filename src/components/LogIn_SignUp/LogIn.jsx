@@ -29,7 +29,7 @@ const LogIn = () => {
   const [emailS, setEmailS] = useState("");
   const [passwordS, setPasswordS] = useState("");
 
-  const { setUser, user } = useContext(UserContext);
+  const { setUser, BASE_URL, googleSignIn } = useContext(UserContext);
 
   const handleSignUp = async (e) => {
     e.preventDefault();
@@ -37,7 +37,7 @@ const LogIn = () => {
       return toast.error("Kindly Fill all the fields");
     try {
       const res = await axios.post(
-        "http://localhost:8000/users/register",
+        `${BASE_URL}/users/register`,
         {
           name,
           username,
@@ -59,7 +59,7 @@ const LogIn = () => {
         setPassword("");
 
         await axios
-          .get("http://localhost:8000/users/profile", {
+          .get(`${BASE_URL}/users/profile`, {
             withCredentials: true, // Set withCredentials to true to receive the cookie
           })
           .then((res) => {
@@ -84,7 +84,7 @@ const LogIn = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:8000/users/login",
+        `${BASE_URL}/users/login`,
         {
           email: emailS,
           password: passwordS,
@@ -102,12 +102,12 @@ const LogIn = () => {
         setPasswordS("");
 
         await axios
-        .get("http://localhost:8000/users/profile", {
-          withCredentials: true, // Set withCredentials to true to receive the cookie
-        })
-        .then((res) => {
-          setUser(res.data);
-        });
+          .get(`${BASE_URL}/users/profile`, {
+            withCredentials: true, // Set withCredentials to true to receive the cookie
+          })
+          .then((res) => {
+            setUser(res.data);
+          });
 
         toast.success(res.data.message);
         return navigate("/");
@@ -120,15 +120,78 @@ const LogIn = () => {
   };
 
   const handleGoogleSignIn = async () => {
-    // try {
-    //   const res = await signInWithGoogle();
-    //   // console.log(res);
-    //   setIsAuthorized(true)
-    //   toast.success(`Welcome Back, ${res.user.displayName}`);
-    //   navigate("/");
-    // } catch (err) {
-    //   console.log(err.message);
-    // }
+    try {
+      const response = await googleSignIn();
+      const { displayName, email, uid, photoURL, providerId } = response.user;
+      const username = email.split("@")[0];
+      // console.log(response.user);
+      const res = await axios.post(
+        `${BASE_URL}/users/register`,
+        {
+          name: displayName,
+          username: username,
+          email: email,
+          password: uid,
+          profilePic: photoURL,
+          providerId,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          withCredentials: true,
+        }
+      );
+
+      if (res.data.success === true) {
+        setEmail("");
+        setName("");
+        setUsername("");
+        setPassword("");
+
+        await axios
+          .get(`${BASE_URL}/users/profile`, {
+            withCredentials: true, // Set withCredentials to true to receive the cookie
+          })
+          .then((res) => {
+            setUser(res.data);
+          });
+        toast.success(res.data.message);
+        return navigate("/");
+      }
+
+      // Already registered with google
+      if (res.data.message === "Email already registered with google") {
+        const res = await axios.post(
+          `${BASE_URL}/users/login`,
+          {
+            email,
+            password: uid,
+          },
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+            withCredentials: true,
+          }
+        );
+        if (res.data.success === true) {
+          await axios
+            .get(`${BASE_URL}/users/profile`, {
+              withCredentials: true, // Set withCredentials to true to receive the cookie
+            })
+            .then((res) => {
+              setUser(res.data);
+            });
+          toast.success(res.data.message);
+          return navigate("/");
+        }
+      }
+
+      toast.error(res.data.message);
+    } catch (err) {
+      console.log(err.message);
+    }
   };
 
   const handlePhoneSignIn = () => {
@@ -144,15 +207,6 @@ const LogIn = () => {
         <div className="form-container sign-up-container">
           <form>
             <h1>Create Account</h1>
-            <div className="social-container">
-              <a className="social">
-                <FcGoogle />
-              </a>
-              <a className="social">
-                <FcPhoneAndroid />
-              </a>
-            </div>
-            <span>or use your email for registration</span>
             <input
               type="text"
               placeholder="Enter Name"

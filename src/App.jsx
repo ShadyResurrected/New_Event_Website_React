@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import Navbar from "./components/Navbar/Navbar";
 
 // import 'bootstrap/dist/css/bootstrap.min.css';
@@ -7,12 +7,13 @@ import "../src/global.css";
 
 import "../src/assests/css/font-awesome.css";
 
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-
-import Home from "./components/Home/Home";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { Toaster } from "react-hot-toast";
+import { UserContext } from "./Context/UserContext";
+import axios from "axios";
 
+import Home from "./components/Home/Home";
 import Communities from "./components/Communities/Communities";
 import Stats from "./components/Stats/Stats";
 import Footer from "./components/Footer/Footer";
@@ -27,23 +28,19 @@ import Arts from "./components/Communities/Arts_Community/Arts";
 import Checkout from "./components/Checkout/Checkout";
 import LogIn from "./components/LogIn_SignUp/LogIn";
 import Contest from "./components/Contests/Contest";
-import ProtectedRoute from "./components/ProtectedRoute";
-import { UserContext } from "./Context/UserContext";
-import axios from "axios";
 
 function App() {
+  const { setUser, BASE_URL, user } = useContext(UserContext);
 
-  const {user,setUser} = useContext(UserContext)
-
-  useEffect(async() => {
+  useEffect(async () => {
     await axios
-    .get("http://localhost:8000/users/profile", {
-      withCredentials: true,
-    })
-    .then((res) => {
-      setUser(res.data);
-    });
-  }, [])
+      .get(`${BASE_URL}/users/profile`, {
+        withCredentials: true,
+      })
+      .then((res) => {
+        setUser(res.data);
+      });
+  }, []);
 
   return (
     <div>
@@ -53,50 +50,18 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/communities" element={<Communities />} />
-          <Route
-            path="/stats"
-            element={
-              <ProtectedRoute>
-                <Stats />
-              </ProtectedRoute>
-            }
-          />
+          <Route path="/stats" element={user?._id ? <Stats /> : <LogIn />} />
           <Route path="/blog-1" element={<Blog1 />} />
           <Route path="/blog-2" element={<Blog2 />} />
           <Route path="/blog-3" element={<Blog3 />} />
           <Route path="/compete" element={<Compete />} />
           <Route
             path="/e_sports"
-            element={
-              <ProtectedRoute>
-                <E_Sports />
-              </ProtectedRoute>
-            }
+            element={user?._id ? <E_Sports /> : <LogIn />}
           />
-          <Route
-            path="/coding"
-            element={
-              <ProtectedRoute>
-                <Coding />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/sports"
-            element={
-              <ProtectedRoute>
-                <Sports />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/arts"
-            element={
-              <ProtectedRoute>
-                <Arts />
-              </ProtectedRoute>
-            }
-          />
+          <Route path="/coding" element={user?._id ? <Coding /> : <LogIn />} />
+          <Route path="/sports" element={user?._id ? <Sports /> : <LogIn />} />
+          <Route path="/arts" element={user?._id ? <Arts /> : <LogIn />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/login" element={<LogIn />} />
           <Route path="/contest" element={<Contest />} />
