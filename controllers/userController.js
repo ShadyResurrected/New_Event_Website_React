@@ -50,6 +50,12 @@ export const login = async (req, res) => {
     // as we have declared select as false in the model we have to also include password field to recieve it, other than email
     const user = await User.findOne({ email }).select("+password");
 
+    if (user.providerId === "firebase") {
+      return res.json({
+        success: false,
+        message: "Email already registered with google",
+      });
+    }
 
     if (!user)
       return res.json({ success: false, message: "Invalid Email or Password" });
