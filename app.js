@@ -14,7 +14,7 @@ app.use(cookieParser()); // to access the stored cookie
 
 app.use(
   cors({
-    origin: ["http://localhost:3000"], // website url that should be allowed to access this api
+    origin: ["http://localhost:3000","https://new-event-website-react.vercel.app"], // website url that should be allowed to access this api
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
