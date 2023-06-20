@@ -9,8 +9,8 @@ import { Link } from 'react-router-dom'
 const Welcome = () => {
     return (
         <div>
-            <div class="welcome-area" id="welcome">
-                <div class="header-text container">
+            <div className="welcome-area" id="welcome">
+                <div className="header-text container">
                     <Preloader />
                     <Link to="/compete"><button className='start-btn'>Let's Compete <IoChevronForwardCircleOutline className='forward-icon' /></button></Link>
                     <div className="description-summary">
